@@ -3,61 +3,189 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
   font-size: 50px;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: 'Ubuntu', sans-serif;
+}
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 textarea {
   overflow: auto;
-  resize: vertical; }
+  resize: vertical;
+}
 
 input, textarea, button, select, a {
   outline: none;
-  border: none; }
+  border: none;
+}
+
+img {
+  vertical-align: middle;
+}
 
 #pg-header {
   width: 100%;
-  font-size: .26rem; }
-  #pg-header nav {
-    padding: .24rem .6rem;
-    line-height: .6rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    border-bottom: .02rem solid #ededed; }
-  #pg-header ul li {
-    display: inline-block; }
-    #pg-header ul li a {
-      color: #333;
-      -webkit-transition: color .3s ease;
-      -o-transition: color .3s ease;
-      transition: color .3s ease; }
-      #pg-header ul li a:hover {
-        color: #ffc400; }
-  #pg-header .main-nav li {
-    margin-right: .4rem; }
-  #pg-header .cart {
-    margin-left: .4rem;
-    padding-left: .4rem;
-    border-left: .02rem solid #ededed; }
-    #pg-header .cart i {
-      font-size: .32rem;
-      margin-right: .02rem;
-      padding-right: .08rem;
-      color: #ffc400; }
-    #pg-header .cart a {
-      font-size: .32rem;
-      font-weight: bold; }
-    #pg-header .cart .cart-info {
-      margin: 0 .2rem; }
+  font-size: .26rem;
+}
+
+#pg-header nav {
+  padding: .24rem .6rem;
+  line-height: .6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: .02rem solid #ededed;
+}
+
+#pg-header ul li {
+  display: inline-block;
+}
+
+#pg-header ul li a {
+  color: #333;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+#pg-header ul li a:hover {
+  color: #ffc400;
+}
+
+#pg-header .main-nav li {
+  margin-right: .4rem;
+}
+
+#pg-header .cart {
+  margin-left: .4rem;
+  padding-left: .4rem;
+  border-left: .02rem solid #ededed;
+}
+
+#pg-header .cart i {
+  font-size: .32rem;
+  margin-right: .02rem;
+  padding-right: .08rem;
+  color: #ffc400;
+}
+
+#pg-header .cart a {
+  font-size: .32rem;
+  font-weight: bold;
+}
+
+#pg-header .cart .cart-info {
+  margin: 0 .2rem;
+}
+
+#pg-banner .banner-header {
+  margin: .24rem 0;
+  font-size: .4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#pg-banner .banner-header .burger-icon, #pg-banner .banner-header .search-icon {
+  display: inline-block;
+  width: 1.12rem;
+  height: 1.12rem;
+  text-align: center;
+  line-height: 1.12rem;
+  cursor: pointer;
+}
+
+#pg-banner .banner-header .search-icon {
+  color: #ffc400;
+}
+
+#pg-banner .banner-body {
+  position: relative;
+  width: 100%;
+  height: 13.32rem;
+  overflow: hidden;
+}
+
+#pg-banner .banner-body:hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.2);
+}
+
+#pg-banner .banner-body:hover .banner-pic {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#pg-banner .banner-body .banner-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#pg-banner .banner-body .banner-text {
+  z-index: 2;
+  width: 12rem;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  right: 11%;
+}
+
+#pg-banner .banner-body .banner-text h3 {
+  font-size: .36rem;
+  margin-bottom: .6rem;
+}
+
+#pg-banner .banner-body .banner-text h1 {
+  font-size: 1.2rem;
+  margin-bottom: .86rem;
+}
+
+#pg-banner .banner-body .banner-text button {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: transparent;
+  font-size: .26rem;
+  text-align: center;
+  padding: .18rem .6rem;
+}
+
+#pg-banner .banner-body .banner-text button:hover {
+  background-color: #fff;
+  color: #333;
+}
