@@ -22,3 +22,42 @@ textarea {
 input, textarea, button, select, a {
   outline: none;
   border: none; }
+
+#pg-header {
+  width: 100%;
+  font-size: .26rem; }
+  #pg-header nav {
+    padding: .24rem .6rem;
+    line-height: .6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: .02rem solid #ededed; }
+  #pg-header ul li {
+    display: inline-block; }
+    #pg-header ul li a {
+      color: #333;
+      -webkit-transition: color .3s ease;
+      -o-transition: color .3s ease;
+      transition: color .3s ease; }
+      #pg-header ul li a:hover {
+        color: #ffc400; }
+  #pg-header .main-nav li {
+    margin-right: .4rem; }
+  #pg-header .cart {
+    margin-left: .4rem;
+    padding-left: .4rem;
+    border-left: .02rem solid #ededed; }
+    #pg-header .cart i {
+      font-size: .32rem;
+      margin-right: .02rem;
+      padding-right: .08rem;
+      color: #ffc400; }
+    #pg-header .cart a {
+      font-size: .32rem;
+      font-weight: bold; }
+    #pg-header .cart .cart-info {
+      margin: 0 .2rem; }
