@@ -301,7 +301,6 @@ img {
 
 #best-seller .bs-content .bs-item .item-price {
   font-size: .38rem;
-  margin-bottom: .42rem;
 }
 
 #best-seller .bs-content .bs-item .item-btn {
@@ -343,4 +342,88 @@ img {
 
 #best-seller .bs-content .bs-item .item-icon i:hover {
   color: #ffc400;
+}
+
+#products {
+  margin-top: .8rem;
+}
+
+#products .prod-item {
+  border-bottom: 1px solid #fff;
+  position: relative;
+  width: 100%;
+  height: 13.32rem;
+  overflow: hidden;
+}
+
+#products .prod-item:nth-child(odd) .prod-text {
+  left: 11%;
+}
+
+#products .prod-item:nth-child(even) .prod-text {
+  right: 11%;
+}
+
+#products .prod-item:hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.2);
+}
+
+#products .prod-item:hover .prod-img img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#products .prod-item .prod-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+#products .prod-item .prod-text {
+  z-index: 2;
+  width: 12rem;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+}
+
+#products .prod-item .prod-text h3 {
+  font-size: .36rem;
+  margin-bottom: .6rem;
+}
+
+#products .prod-item .prod-text h1 {
+  font-size: 1.2rem;
+  margin-bottom: .86rem;
+}
+
+#products .prod-item .prod-text button {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: .26rem;
+  text-align: center;
+  padding: .18rem .6rem;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+#products .prod-item .prod-text button:hover {
+  background-color: #fff;
+  color: #333;
 }
