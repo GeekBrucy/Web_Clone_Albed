@@ -365,6 +365,7 @@ img {
 }
 
 #products .prod-item:hover .overlay {
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -377,6 +378,12 @@ img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+#products .prod-item .overlay {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 #products .prod-item .prod-img img {
