@@ -442,6 +442,12 @@ img {
   color: #777;
 }
 
+#about-info-contact:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 #about-info-contact a {
   color: #777;
   -webkit-transition: all .3s ease;
@@ -556,4 +562,32 @@ img {
 
 #about-info-contact .store-info button:hover {
   border-color: #000;
+}
+
+#pg-footer {
+  margin-top: 1.28rem;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: .4rem;
+}
+
+#pg-footer p {
+  font-size: .26rem;
+  margin-left: .5rem;
+}
+
+#pg-footer img {
+  display: block;
+}
+
+#pg-footer .container {
+  padding: 0 .4rem;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
