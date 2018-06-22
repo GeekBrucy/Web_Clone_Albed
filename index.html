@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Albedo</title>
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
@@ -40,6 +40,74 @@
       <div class="search-icon">
         <i class="fas fa-search"></i>
       </div>
+      <!-- banner sidebar START -->
+      <div class="sidebar">
+        <ul class="sidebar-menu">
+          <li class="sb-menu-item"><a class="item-link" href="#">Microphones</a><i class="fas fa-chevron-right"></i></li>
+          <li class="sb-menu-item"><a class="item-link" href="#">Interfaces</a></li>
+          <li class="sb-menu-item"><a class="item-link" href="#">Mixers</a></li>
+          <li class="sb-menu-item"><a class="item-link" href="#">Headphones</a></li>
+          <li class="sb-menu-item"><a class="item-link" href="#">Accessories</a></li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Product types</a><i class="fas fa-chevron-right"></i>
+            <ul>
+              <li><a href="#">Products with options</a></li>
+              <li><a href="#">Simple Products</a></li>
+              <li><a href="#">Configurable products</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- banner sidebar END -->
+
+      <!-- hover show category START -->
+      <div class="category">
+        <div class="container">
+          <div class="category-item">
+            <a href="#">
+              <h3>MICROPHONES</h3>
+            </a>
+            <ul>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <a href="#">
+              <h3>INTERFACES</h3>
+            </a>
+            <ul>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <a href="#">
+              <h3>HEADPHONES</h3>
+            </a>
+            <ul>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
+              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- hover show category END -->
+      <!-- searchbar START -->
+      <div class="searchbar">
+        <input type="text" placeholder="Search entire store here...">
+        <button>Search</button>
+      </div>
+      <!-- searchbar END -->
     </header>
     <div class="banner-body">
       <div class="overlay">
@@ -53,6 +121,8 @@
     </div>
   </section>
   <!-- banner END -->
+
+
 
   <!-- bestseller START -->
   <section id="best-seller">
@@ -297,6 +367,7 @@
     </div>
   </footer>
   <!-- footer END -->
+  <script src="./js/banner-header.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
