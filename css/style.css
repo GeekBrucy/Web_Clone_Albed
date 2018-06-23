@@ -744,13 +744,24 @@ img {
   color: #ffc400;
 }
 
-@media screen and (max-width: 414px) and (min-width: 320px) {
-  .bs-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+#best-seller {
+  margin-top: .3rem;
+}
+
+#best-seller .bs-header {
+  margin-bottom: .3rem;
+}
+
+#best-seller .bs-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#best-seller .bs-content .bs-item {
+  width: 100%;
+  margin-bottom: .5rem;
 }
 
 #products {
