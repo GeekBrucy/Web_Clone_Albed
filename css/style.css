@@ -102,8 +102,8 @@ img {
   z-index: 900;
   top: 2.72rem;
   bottom: 0;
-  left: -15%;
-  width: 4.5rem;
+  left: 0;
+  width: 0;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
@@ -182,7 +182,7 @@ img {
   transform: rotate(-90deg);
 }
 
-.sidebar .sidebar-menu .sb-menu-item:last-child:hover ul {
+.sidebar .sidebar-menu .sb-menu-item:last-child:hover ul.prod-type {
   visibility: visible;
   opacity: 1;
   top: 0;
@@ -206,10 +206,14 @@ img {
 @media screen and (max-width: 992px) and (min-width: 320px) {
   .sidebar, .sidebar.scroll {
     top: 1.12rem;
+    overflow: auto !important;
+    background-color: #fff;
   }
   .sidebar .sidebar-menu, .sidebar.scroll .sidebar-menu {
     font-size: .3rem;
     padding-top: .3rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
   .sidebar .sidebar-menu .sb-menu-item, .sidebar.scroll .sidebar-menu .sb-menu-item {
     padding: .34rem .3rem;
@@ -287,8 +291,8 @@ img {
   top: -0.33rem;
   left: 4.5rem;
   height: 7.12rem;
+  z-index: 9999;
   background: #fff;
-  z-index: 999;
   -webkit-box-shadow: 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.06);
   box-shadow: 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.06);
   visibility: hidden;
@@ -659,11 +663,12 @@ img {
     margin-bottom: .06rem;
   }
   #pg-banner .banner-body .banner-text h1 {
+    font-weight: normal;
     font-size: .34rem;
     margin-bottom: .1rem;
   }
   #pg-banner .banner-body .banner-text button {
-    padding: .12rem .4rem;
+    padding: .03rem .4rem;
   }
 }
 
@@ -1136,14 +1141,21 @@ img {
     height: auto;
     border: 0;
     margin-bottom: .2rem;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
   }
   #about-info-contact > * h3 {
     font-size: .4rem;
   }
-  #about-info-contact > * ul.collapse, #about-info-contact > * p.collapse {
+  #about-info-contact .collapse {
     overflow: hidden;
     height: 0;
     margin: 0;
+  }
+  #about-info-contact .collapse.open {
+    height: auto;
+    margin-bottom: .2rem;
   }
   #about-info-contact .about .top, #about-info-contact .store-info .top {
     margin: 0;
