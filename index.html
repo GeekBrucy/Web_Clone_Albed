@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Albedo</title>
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <!-- header and navbar START -->
   <header id="pg-header">
     <nav class="header-navbar">
       <ul class="main-nav">
-        <li><a href="#">My Account</a></li>
-        <li><a href="#">My Wish List (0)</a></li>
-        <li><a href="#">Compare (0)</a></li>
-        <li><a href="#">Create an Account</a></li>
-        <li><a href="#">Sign In</a></li>
+        <li>
+          <a href="#">My Account</a>
+        </li>
+        <li>
+          <a href="#">My Wish List (0)</a>
+        </li>
+        <li>
+          <a href="#">Compare (0)</a>
+        </li>
+        <li>
+          <a href="#">Create an Account</a>
+        </li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
       </ul>
       <ul class="greet-cart">
         <li class="greet">Welcome to our online store!</li>
-        <li class="cart"><a href="#"><i class="fas fa-shopping-basket"></i> MY CART:</a><span class="cart-info">0 item(s)</span></li>
+        <li class="cart">
+          <a href="#">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-text">MY CART:</span>
+          </a>
+          <span class="cart-info">0 item(s)</span>
+        </li>
       </ul>
     </nav>
   </header>
@@ -34,8 +53,10 @@
       <div class="burger-icon">
         <i class="fas fa-bars"></i>
       </div>
-      <div>
-        <img src="./img/logo.png" alt="albedo logo">
+      <div class="logo-container">
+        <div class="pg-logo">
+          <img src="./img/logo.png" alt="albedo logo">
+        </div>
       </div>
       <div class="search-icon">
         <i class="fas fa-search"></i>
@@ -43,17 +64,35 @@
       <!-- banner sidebar START -->
       <div class="sidebar">
         <ul class="sidebar-menu">
-          <li class="sb-menu-item"><a class="item-link" href="#">Microphones</a><i class="fas fa-chevron-right"></i></li>
-          <li class="sb-menu-item"><a class="item-link" href="#">Interfaces</a></li>
-          <li class="sb-menu-item"><a class="item-link" href="#">Mixers</a></li>
-          <li class="sb-menu-item"><a class="item-link" href="#">Headphones</a></li>
-          <li class="sb-menu-item"><a class="item-link" href="#">Accessories</a></li>
           <li class="sb-menu-item">
-            <a class="item-link" href="#">Product types</a><i class="fas fa-chevron-right"></i>
+            <a class="item-link" href="#">Microphones</a>
+            <i class="fas fa-chevron-right"></i>
+          </li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Interfaces</a>
+          </li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Mixers</a>
+          </li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Headphones</a>
+          </li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Accessories</a>
+          </li>
+          <li class="sb-menu-item">
+            <a class="item-link" href="#">Product types</a>
+            <i class="fas fa-chevron-right"></i>
             <ul>
-              <li><a href="#">Products with options</a></li>
-              <li><a href="#">Simple Products</a></li>
-              <li><a href="#">Configurable products</a></li>
+              <li>
+                <a href="#">Products with options</a>
+              </li>
+              <li>
+                <a href="#">Simple Products</a>
+              </li>
+              <li>
+                <a href="#">Configurable products</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -68,11 +107,36 @@
               <h3>MICROPHONES</h3>
             </a>
             <ul>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Microphones</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Interfaces</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Mixers</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Headphones</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Accessories</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="category-item">
@@ -80,11 +144,36 @@
               <h3>INTERFACES</h3>
             </a>
             <ul>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Accessories</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Headphones</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Mixers</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Interfaces</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Microphones</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="category-item">
@@ -92,11 +181,36 @@
               <h3>HEADPHONES</h3>
             </a>
             <ul>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Mixers</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Headphones</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Interfaces</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Microphones</span></a></li>
-              <li><a href="#"><i class="fas fa-circle"></i><span>Accessories</span></a></li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Mixers</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Headphones</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Interfaces</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Microphones</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-circle"></i>
+                  <span>Accessories</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -109,6 +223,11 @@
       </div>
       <!-- searchbar END -->
     </header>
+    <div class="logo-container">
+      <div class="pg-logo">
+        <img src="./img/logo.png" alt="albedo logo">
+      </div>
+    </div>
     <div class="banner-body">
       <div class="overlay">
         <img class="banner-pic" src="./img/banner-1.jpg" alt="">
@@ -131,7 +250,9 @@
     </header>
     <div class="bs-content">
       <div class="bs-item">
-        <a class="view-item" href="#"><i class="fas fa-search-plus"></i></a>
+        <a class="view-item" href="#">
+          <i class="fas fa-search-plus"></i>
+        </a>
         <div class="item-img">
           <a href="#">
             <img src="./img/subzero_sz_hpa4_4_channel_headphone_amp_1.png" alt="">
@@ -139,7 +260,7 @@
         </div>
         <div class="item-name">
           <a href="#">
-            subzero sz hpa4 4 channel headphone amp                                                       
+            subzero sz hpa4 4 channel headphone amp
           </a>
         </div>
         <div class="item-price">
@@ -154,7 +275,9 @@
         </div>
       </div>
       <div class="bs-item">
-        <a class="view-item" href="#"><i class="fas fa-search-plus"></i></a>
+        <a class="view-item" href="#">
+          <i class="fas fa-search-plus"></i>
+        </a>
         <div class="item-img">
           <a href="#">
             <img src="./img/allen_and_heath_qu_24_digital_mixer_chrome_edition_1.png" alt="">
@@ -177,7 +300,9 @@
         </div>
       </div>
       <div class="bs-item">
-        <a class="view-item" href="#"><i class="fas fa-search-plus"></i></a>
+        <a class="view-item" href="#">
+          <i class="fas fa-search-plus"></i>
+        </a>
         <div class="item-img">
           <a href="#">
             <img src="./img/roland_r_88_8_channel_recorder_and_mixer_1_1.png" alt="">
@@ -200,7 +325,9 @@
         </div>
       </div>
       <div class="bs-item">
-        <a class="view-item" href="#"><i class="fas fa-search-plus"></i></a>
+        <a class="view-item" href="#">
+          <i class="fas fa-search-plus"></i>
+        </a>
         <div class="item-img">
           <a href="#">
             <img src="./img/sennheiser_e906_dynamic_microphone_for_guitar_cabinets_1.png" alt="">
@@ -284,59 +411,129 @@
     <div class="about">
       <div class="top">
         <h3>ABOUT</h3>
-        <P>We guarantee the highest quality of the products we sell. Several decades of successful operation and millions of happy customers let us feel certain about that. Besides, all items we sell pass thorough quality control, so no characteristics mismatch can escape the eye of our professionals.</P>
+        <P>We guarantee the highest quality of the products we sell. Several decades of successful operation and millions of
+          happy customers let us feel certain about that. Besides, all items we sell pass thorough quality control, so no
+          characteristics mismatch can escape the eye of our professionals.</P>
       </div>
       <div class="bottom">
         <ul>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="info">
       <h3>INFORMATION</h3>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Customer Service</a></li>
-        <li><a href="#">Template Settings</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Search Terms</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Orders and Returns</a></li>
-        <li><a href="#">Advanced Search</a></li>
-        <li><a href="#">Newsletter Subscription</a></li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Customer Service</a>
+        </li>
+        <li>
+          <a href="#">Template Settings</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Search Terms</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Orders and Returns</a>
+        </li>
+        <li>
+          <a href="#">Advanced Search</a>
+        </li>
+        <li>
+          <a href="#">Newsletter Subscription</a>
+        </li>
       </ul>
     </div>
     <div class="why-us">
       <h3>WHY BUY FROM US</h3>
       <ul>
-        <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="#">Secure Shopping</a></li>
-        <li><a href="#">International Shipping</a></li>
-        <li><a href="#">Affiliates</a></li>
-        <li><a href="#">Group Sales</a></li>
+        <li>
+          <a href="#">Shipping & Returns</a>
+        </li>
+        <li>
+          <a href="#">Secure Shopping</a>
+        </li>
+        <li>
+          <a href="#">International Shipping</a>
+        </li>
+        <li>
+          <a href="#">Affiliates</a>
+        </li>
+        <li>
+          <a href="#">Group Sales</a>
+        </li>
       </ul>
     </div>
     <div class="my-acc">
       <h3>MY ACCOUNT</h3>
       <ul>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">View Cart</a></li>
-        <li><a href="#">My Wishlist</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
+        <li>
+          <a href="#">View Cart</a>
+        </li>
+        <li>
+          <a href="#">My Wishlist</a>
+        </li>
+        <li>
+          <a href="#">FAQ</a>
+        </li>
       </ul>
     </div>
     <div class="store-info">
       <div class="top">
         <h3>STORE INFO</h3>
         <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span> Address: Glasgow D04 89GR</span></li>
-          <li><i class="fas fa-phone"></i><span> Phones: 800-2345-6789; 800-2345-6789</span></li>
-          <li><i class="far fa-clock"></i><span> Hours: 7 days a week from 9:00 am to 7:00 pm</span></li>
-          <li><i class="fas fa-envelope"></i><span> E-mail: info@demolink.org</span></li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span> Address: Glasgow D04 89GR</span>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <span> Phones: 800-2345-6789; 800-2345-6789</span>
+          </li>
+          <li>
+            <i class="far fa-clock"></i>
+            <span> Hours: 7 days a week from 9:00 am to 7:00 pm</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span> E-mail: info@demolink.org</span>
+          </li>
         </ul>
       </div>
       <div class="bottom">
@@ -367,7 +564,9 @@
     </div>
   </footer>
   <!-- footer END -->
+  <script src="./js/fastclick.js"></script>
   <script src="./js/banner-header.js"></script>
   <script src="./js/main.js"></script>
 </body>
+
 </html>

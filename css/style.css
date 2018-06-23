@@ -99,7 +99,7 @@ img {
 
 .sidebar {
   position: fixed;
-  z-index: 999;
+  z-index: 900;
   top: 2.72rem;
   bottom: 0;
   left: 0;
@@ -116,10 +116,12 @@ img {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-  -webkit-box-shadow: 0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.3);
-  box-shadow: 0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0.06rem 0.06rem 0.6rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.06rem 0.06rem 0.6rem rgba(0, 0, 0, 0.3);
   padding-top: .6rem;
   font-size: .26rem;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .sidebar .sidebar-menu a {
@@ -380,17 +382,21 @@ img {
 
 #pg-banner .banner-header .search-icon {
   color: #ffc400;
-  z-index: 999;
+  z-index: 9999;
 }
 
 #pg-banner .banner-header .search-icon:hover {
   color: #191919;
 }
 
+#pg-banner > .logo-container {
+  display: none;
+}
+
 #pg-banner .banner-body {
   position: relative;
   width: 100%;
-  height: 13.32rem;
+  height: 13rem;
   overflow: hidden;
 }
 
@@ -414,7 +420,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  bottom: 0;
   z-index: -1;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -485,6 +491,102 @@ img {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 320px) {
+  #pg-header {
+    visibility: hidden;
+    height: 0;
+  }
+  #pg-header .cart-text {
+    display: none;
+  }
+  #pg-header .cart {
+    visibility: visible;
+    border: 0;
+    background-color: #333;
+    display: block !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    line-height: 1.08rem;
+    color: #fff !important;
+    z-index: 9998;
+    margin: 0;
+  }
+  #pg-header .cart .fas {
+    font-size: .4rem;
+    color: #fff;
+  }
+  #pg-banner .banner-header {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    -webkit-box-shadow: 0 0.06rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.06rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  #pg-banner .banner-header .search-icon {
+    position: fixed;
+    top: 0;
+    left: 45%;
+    color: #fff !important;
+  }
+  #pg-banner .banner-header .logo-container {
+    display: none;
+  }
+  #pg-banner .banner-header.scroll {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #pg-banner .logo-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: .94rem;
+  }
+  #pg-banner .logo-container .pg-logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  #pg-banner .banner-body {
+    margin-top: 2.4rem;
+    height: 2.6rem;
+  }
+  #pg-banner .banner-body .banner-text {
+    top: .26rem;
+    right: .3rem;
+    width: 3rem;
+    height: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #pg-banner .banner-body .banner-text h3 {
+    font-weight: normal;
+    font-size: .28rem;
+    margin-bottom: .06rem;
+  }
+  #pg-banner .banner-body .banner-text h1 {
+    font-size: .34rem;
+    margin-bottom: .1rem;
+  }
+  #pg-banner .banner-body .banner-text button {
+    padding: .12rem .4rem;
   }
 }
 
@@ -642,6 +744,15 @@ img {
   color: #ffc400;
 }
 
+@media screen and (max-width: 414px) and (min-width: 320px) {
+  .bs-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 #products {
   margin-top: .8rem;
 }
@@ -650,7 +761,7 @@ img {
   border-bottom: 1px solid #fff;
   position: relative;
   width: 100%;
-  height: 13.32rem;
+  height: 13rem;
   overflow: hidden;
 }
 
@@ -690,6 +801,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  height: auto;
   z-index: -1;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -860,6 +972,14 @@ img {
 
 #about-info-contact .store-info button:hover {
   border-color: #000;
+}
+
+#about-info-contact {
+  margin: 0;
+}
+
+#about-info-contact .about, #about-info-contact .store-info {
+  padding: 0 !important;
 }
 
 #pg-footer {

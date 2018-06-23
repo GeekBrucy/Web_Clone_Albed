@@ -25,12 +25,16 @@ var bannerHeader = (function () {
         burgerIcon.classList.add('fa-times')
         burgerIcon.style.transform = 'rotate(180deg)'
         sideBar.style.transform = 'translateX(100%)'
+        sideBar.style.visibility = 'visible'
+        sideBar.style.opacity = 1
       } else {
         burgerIcon.style.transform = 'rotate(180deg)'
         burgerIcon.classList.remove('fa-times')
         burgerIcon.classList.add('fa-bars')
         burgerIcon.style.transform = 'rotate(-180deg)'
         sideBar.style.transform = 'translateX(-100%)'
+        sideBar.style.visibility = 'hidden'
+        sideBar.style.opacity = 0
       }
     }
   }
@@ -45,7 +49,6 @@ var bannerHeader = (function () {
         clearTimeout(timer)
       }
       timer = setTimeout(function () {
-        console.log('clicked')
         var searchIcon = searchContainer.querySelector('i')
         if (searchIcon.classList.contains('fa-search')) {
           searchBar.style.visibility = 'visible'
