@@ -856,6 +856,42 @@ img {
   color: #333;
 }
 
+#products {
+  margin-top: 0;
+}
+
+#products .prod-item {
+  height: 2.6rem;
+}
+
+#products .prod-item:nth-child(odd) .prod-text {
+  left: .3rem;
+}
+
+#products .prod-item:nth-child(even) .prod-text {
+  right: .3rem;
+}
+
+#products .prod-item .prod-text {
+  width: 3rem;
+  top: .26rem;
+}
+
+#products .prod-item .prod-text h3 {
+  font-weight: normal;
+  font-size: .28rem;
+  margin-bottom: .06rem;
+}
+
+#products .prod-item .prod-text h1 {
+  font-size: .34rem;
+  margin-bottom: .1rem;
+}
+
+#products .prod-item .prod-text button {
+  padding: .12rem .4rem;
+}
+
 #about-info-contact {
   width: 80%;
   margin: 0 auto;
