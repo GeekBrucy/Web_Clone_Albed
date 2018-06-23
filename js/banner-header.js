@@ -3,13 +3,15 @@ var bannerHeader = (function () {
   // mouseIn: boolean type
   function categoryHover (cate, mouseIn) {
     if (mouseIn) {
+      cate.classList.add('active')
       cate.style.visibility = 'visible'
-      cate.style.opacity = 1
-      cate.style.transform = 'translateY(-0.28rem)'
+      // cate.style.opacity = 1
+      // cate.style.transform = 'translateY(-0.28rem)'
     } else {
+      cate.classList.remove('active')
       cate.style.visibility = 'hidden'
-      cate.style.opacity = 0
-      cate.style.transform = 'translateY(0)'
+      // cate.style.opacity = 0
+      // cate.style.transform = 'translateY(0)'
     }
   }
   
@@ -24,6 +26,7 @@ var bannerHeader = (function () {
         burgerIcon.classList.remove('fa-bars')
         burgerIcon.classList.add('fa-times')
         burgerIcon.style.transform = 'rotate(180deg)'
+        sideBar.parentElement.style.left = '0'
         sideBar.style.transform = 'translateX(100%)'
         sideBar.style.visibility = 'visible'
         sideBar.style.opacity = 1
@@ -32,6 +35,7 @@ var bannerHeader = (function () {
         burgerIcon.classList.remove('fa-times')
         burgerIcon.classList.add('fa-bars')
         burgerIcon.style.transform = 'rotate(-180deg)'
+        sideBar.parentElement.style.left = '-15%'
         sideBar.style.transform = 'translateX(-100%)'
         sideBar.style.visibility = 'hidden'
         sideBar.style.opacity = 0

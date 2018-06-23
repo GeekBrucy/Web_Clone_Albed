@@ -4,5 +4,6 @@ window.onload = function () {
       FastClick.attach(document.body);
     }, false);
   }
+  imgResponsive()
   bannerHeader()
 }
