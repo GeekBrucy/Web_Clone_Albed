@@ -45,6 +45,7 @@ var bannerHeader = (function () {
   var searchIconClick = function () {
     var searchContainer = document.querySelector('.search-icon')
     var searchBar = document.querySelector('.searchbar')
+    var cartIcon = document.querySelector('.cart')
     var timer = null
     searchContainer.onclick = function () {
       if (timer) {
@@ -57,11 +58,17 @@ var bannerHeader = (function () {
           searchBar.style.opacity = 1
           searchIcon.classList.remove('fa-search')
           searchIcon.classList.add('fa-times')
+          searchContainer.classList.add('searching')
+          cartIcon.classList.add('searching')
+          searchBar.classList.add('searching')
         } else {
           searchBar.style.visibility = 'hidden'
           searchBar.style.opacity = 0
           searchIcon.classList.remove('fa-times')
+          searchContainer.classList.remove('searching')
+          cartIcon.classList.remove('searching')
           searchIcon.classList.add('fa-search')
+          searchBar.classList.remove('searching')
         }
       }, 100)
     }
