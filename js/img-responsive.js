@@ -2,7 +2,6 @@ var imgResponsive = (function () {
   var imgContainerResize = function () {
     var img = document.querySelectorAll('.overlay div[class$=-img] img')
     window.addEventListener('resize', function () {
-      console.log('resizing')
       var timer = null
       if (timer) {
         this.clearTimeout(timer)
@@ -15,6 +14,6 @@ var imgResponsive = (function () {
       }, 100)
     })
   }
-
-  return imgContainerResize
+  var init = throttle(imgContainerResize, 300, 1000)
+  return init
 }())

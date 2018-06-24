@@ -477,19 +477,22 @@ img {
 }
 
 .category .container .category-item:nth-child(1) {
-  background: url(../../img/category-1.png) no-repeat;
+  background-image: url(https://image.ibb.co/dzgWn8/category_1.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .category .container .category-item:nth-child(2) {
-  background: url(../../img/category-2.png) no-repeat;
+  background-image: url(https://image.ibb.co/bAuj78/category_2.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .category .container .category-item:nth-child(3) {
-  background: url(../../img/category-3.png) no-repeat;
+  background-image: url(https://image.ibb.co/eHcRLT/category_3.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }

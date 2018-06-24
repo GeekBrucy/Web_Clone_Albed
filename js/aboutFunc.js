@@ -7,18 +7,12 @@ var aboutFunc = (function () {
         if(window.getComputedStyle(icon, null).display === 'none') {
           return
         }
-        // for (var j = 0; j < showMore.length; j++) {
-        //   // showMore[j].nextElementSibling.classList.remove('open')
-        //   // showMore[j].children[1].classList.replace('fa-chevron-up', 'fa-chevron-down')
-        //   // icon.classList.toggle('fa-chevron-down')
-        //   // icon.classList.toggle('fa-chevron-up')
-        // }
-        // // icon.classList.replace('fa-chevron-down', 'fa-chevron-up')
         icon.classList.toggle('fa-chevron-down')
         icon.classList.toggle('fa-chevron-up')
         this.nextElementSibling.classList.toggle('open')
       }
     }
   }
-  return showDetail
+  var init = throttle(showDetail, 200, 1000)
+  return init
 }())

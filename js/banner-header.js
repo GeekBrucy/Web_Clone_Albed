@@ -12,7 +12,7 @@ var bannerHeader = (function () {
 
   // category pannel function
   // mouseIn: boolean type
-  function categoryHover (cate, mouseIn) {
+  function categoryHover(cate, mouseIn) {
     if (mouseIn) {
       cate.classList.add('active')
       cate.style.visibility = 'visible'
@@ -21,7 +21,7 @@ var bannerHeader = (function () {
       cate.style.visibility = 'hidden'
     }
   }
-  
+
   // click burger icon, show sidebar
   var burgerIconClick = function () {
     var burgerContainer = document.querySelector('.burger-icon')
@@ -33,7 +33,6 @@ var bannerHeader = (function () {
         burgerIcon.classList.remove('fa-bars')
         burgerIcon.classList.add('fa-times')
         burgerIcon.style.transform = 'rotate(180deg)'
-        // sideBar.parentElement.style.left = '0'
         sideBar.parentElement.style.width = '4.5rem'
         sideBar.style.transform = 'translateX(100%)'
         sideBar.style.visibility = 'visible'
@@ -43,7 +42,6 @@ var bannerHeader = (function () {
         burgerIcon.classList.remove('fa-times')
         burgerIcon.classList.add('fa-bars')
         burgerIcon.style.transform = 'rotate(-180deg)'
-        // sideBar.parentElement.style.left = '-30%'
         sideBar.parentElement.style.width = 0
         sideBar.style.transform = 'translateX(-100%)'
         sideBar.style.visibility = 'hidden'
@@ -59,29 +57,24 @@ var bannerHeader = (function () {
     var cartIcon = document.querySelector('.cart')
     var timer = null
     searchContainer.onclick = function () {
-      if (timer) {
-        clearTimeout(timer)
+      var searchIcon = searchContainer.querySelector('i')
+      if (searchIcon.classList.contains('fa-search')) {
+        searchBar.style.visibility = 'visible'
+        searchBar.style.opacity = 1
+        searchIcon.classList.remove('fa-search')
+        searchIcon.classList.add('fa-times')
+        searchContainer.classList.add('searching')
+        cartIcon.classList.add('searching')
+        searchBar.classList.add('searching')
+      } else {
+        searchBar.style.visibility = 'hidden'
+        searchBar.style.opacity = 0
+        searchIcon.classList.remove('fa-times')
+        searchIcon.classList.add('fa-search')
+        searchContainer.classList.remove('searching')
+        cartIcon.classList.remove('searching')
+        searchBar.classList.remove('searching')
       }
-      timer = setTimeout(function () {
-        var searchIcon = searchContainer.querySelector('i')
-        if (searchIcon.classList.contains('fa-search')) {
-          searchBar.style.visibility = 'visible'
-          searchBar.style.opacity = 1
-          searchIcon.classList.remove('fa-search')
-          searchIcon.classList.add('fa-times')
-          searchContainer.classList.add('searching')
-          cartIcon.classList.add('searching')
-          searchBar.classList.add('searching')
-        } else {
-          searchBar.style.visibility = 'hidden'
-          searchBar.style.opacity = 0
-          searchIcon.classList.remove('fa-times')
-          searchContainer.classList.remove('searching')
-          cartIcon.classList.remove('searching')
-          searchIcon.classList.add('fa-search')
-          searchBar.classList.remove('searching')
-        }
-      }, 100)
     }
   }
 
@@ -90,28 +83,21 @@ var bannerHeader = (function () {
     var bannerHeader = document.querySelector('.banner-header')
     var sideBar = document.querySelector('.sidebar')
     var category = document.querySelector('.category')
-    var timer = null
-    if (timer) {
-      clearTimeout(timer)
-    }
-    
-    timer = setTimeout(function () {
-      window.onscroll = function () {
-        if (window.pageYOffset > 70) {
-          if (!bannerHeader.classList.contains('scroll')) {
-            bannerHeader.classList.add('scroll')
-            sideBar.classList.add('scroll')
-            category.classList.add('scroll')
-          }
-        } else {
-          if (bannerHeader.classList.contains('scroll')) {
-            bannerHeader.classList.remove('scroll')
-            sideBar.classList.remove('scroll')
-            category.classList.remove('scroll')
-          }
+    window.onscroll = function () {
+      if (window.pageYOffset > 70) {
+        if (!bannerHeader.classList.contains('scroll')) {
+          bannerHeader.classList.add('scroll')
+          sideBar.classList.add('scroll')
+          category.classList.add('scroll')
+        }
+      } else {
+        if (bannerHeader.classList.contains('scroll')) {
+          bannerHeader.classList.remove('scroll')
+          sideBar.classList.remove('scroll')
+          category.classList.remove('scroll')
         }
       }
-    }, 100)
+    }
   }
 
   // hover on first item and last item in sidebar, show category and other info
@@ -172,15 +158,7 @@ var bannerHeader = (function () {
       cartSidebar.classList.toggle('active')
     }
   }
-  var init = function () {
-    burgerIconClick()
-    searchIconClick()
-    scrollHeader()
-    hoverSidebarItem()
-    userIconClick()
-    cartIconClick()
-  }
-
+  var init = throttle([burgerIconClick, searchIconClick, scrollHeader, hoverSidebarItem, userIconClick, cartIconClick], 200, 800)
 
   return init
 }())

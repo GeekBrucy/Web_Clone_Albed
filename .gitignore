@@ -3,3 +3,5 @@ prepros-6.config
 *.sass
 *.scss
 test.*
+.cache
+dist/
