@@ -1,4 +1,15 @@
 var bannerHeader = (function () {
+  // small screen the navbar in pg-header will become sidebar
+  // and shopping cart list will become sidebar as well
+  // but these two should not open together
+  var navContainer = document.querySelector('.nav-container')
+  var cartSidebar = document.querySelector('.cart-sidebar')
+  var userIconContainer = document.querySelector('.user-icon')
+  var userIcon = userIconContainer.querySelector('i')
+  var cartIconContainer = document.querySelector('.cart')
+  var cartIcon = cartIconContainer.querySelector('i')
+
+
   // category pannel function
   // mouseIn: boolean type
   function categoryHover (cate, mouseIn) {
@@ -130,11 +141,44 @@ var bannerHeader = (function () {
       firstItem_Sidebar.classList.remove('onhover')
     }
   }
+
+  // small screen will show user icon, click this activate right sidebar
+  var userIconClick = function () {
+    var userIconContainer = document.querySelector('.user-icon')
+    var userIcon = userIconContainer.querySelector('i')
+    userIconContainer.onclick = function () {
+      if (cartSidebar.classList.contains('active')) {
+        cartSidebar.classList.remove('active')
+        cartIcon.classList.toggle('fa-shopping-basket')
+        cartIcon.classList.toggle('fa-times')
+      }
+      userIcon.classList.toggle('fa-user')
+      userIcon.classList.toggle('fa-times')
+      navContainer.classList.toggle('active')
+    }
+  }
+  // small screen click cart icon, activate cartsidebar
+  var cartIconClick = function () {
+    var cartIconContainer = document.querySelector('.cart')
+    var cartIcon = cartIconContainer.querySelector('i')
+    cartIconContainer.onclick = function () {
+      if (navContainer.classList.contains('active')) {
+        navContainer.classList.remove('active')
+        userIcon.classList.toggle('fa-user')
+        userIcon.classList.toggle('fa-times')
+      }
+      cartIcon.classList.toggle('fa-shopping-basket')
+      cartIcon.classList.toggle('fa-times')
+      cartSidebar.classList.toggle('active')
+    }
+  }
   var init = function () {
     burgerIconClick()
     searchIconClick()
     scrollHeader()
     hoverSidebarItem()
+    userIconClick()
+    cartIconClick()
   }
 
 

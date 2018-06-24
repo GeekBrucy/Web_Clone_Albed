@@ -75,6 +75,10 @@ img {
   margin-right: .4rem;
 }
 
+#pg-header .main-nav li a {
+  display: block;
+}
+
 #pg-header .cart {
   margin-left: .4rem;
   padding-left: .4rem;
@@ -95,6 +99,10 @@ img {
 
 #pg-header .cart .cart-info {
   margin: 0 .2rem;
+}
+
+#pg-header .cart-sidebar {
+  display: none;
 }
 
 @media screen and (max-width: 992px) and (min-width: 320px) {
@@ -131,8 +139,69 @@ img {
     font-size: .5rem;
     color: #fff;
   }
+  #pg-header .cart-sidebar {
+    visibility: hidden;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 1.12rem;
+    right: 0;
+    width: 0;
+    height: 100%;
+    padding: .34rem .32rem;
+    z-index: 9999;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  #pg-header .cart-sidebar.active {
+    width: 6.4rem;
+    visibility: visible;
+    opacity: 1;
+  }
   #pg-header .cart.searching {
     z-index: 999;
+  }
+  #pg-header .nav-container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 1.12rem;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0.06rem 0 0.4rem 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0.06rem 0 0.4rem 0 rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  #pg-header .nav-container .main-nav {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #pg-header .nav-container .main-nav li {
+    font-weight: bold;
+    border-bottom: 0.02rem solid #C7C8C8;
+    margin: 0;
+  }
+  #pg-header .nav-container .main-nav li a {
+    padding: .34rem .32rem;
+  }
+  #pg-header .nav-container.active {
+    width: 6.4rem;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -650,7 +719,7 @@ img {
   #pg-banner .banner-header .search-icon {
     position: fixed;
     top: 0;
-    right: 40%;
+    right: 3rem;
     color: #fff !important;
     -webkit-transition: all .1s ease;
     -o-transition: all .1s ease;
@@ -664,7 +733,7 @@ img {
     display: block;
     position: fixed;
     top: 0;
-    right: 28%;
+    right: 2.2rem;
     color: #fff;
   }
   #pg-banner .banner-header .logo-container {
